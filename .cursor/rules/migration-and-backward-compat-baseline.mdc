@@ -1,0 +1,25 @@
+---
+description: Migration safety and backward compatibility expectations.
+alwaysApply: true
+---
+
+# Migration and Backward Compatibility Baseline
+
+- If the change includes data/schema migrations or persistent storage modifications:
+  - define forward and backward compatibility expectations,
+  - ensure migration ordering is correct,
+  - document any required application version sequencing.
+- Provide a rollback/restore plan when feasible:
+  - what breaks if rollback is performed,
+  - how to revert safely,
+  - how to validate post-rollback state.
+- Include verification steps for migrations and the new/old behaviors where applicable.
+
+## Migration Verification Placeholders
+
+- Prefer running any configured migration checks:
+  - `MIGRATION_CHECK_COMMAND`
+  - `MIGRATION_TEST_COMMAND`
+  - `MIGRATION_ROLLBACK_CHECK_COMMAND`
+  - `MIGRATION_APPLY_COMMAND` (if your repo supports staging/apply verification)
+

@@ -1,0 +1,21 @@
+---
+description: Choose appropriate testing layers for a change.
+alwaysApply: true
+---
+
+# Testing Layer Expectations
+
+- Determine the smallest adequate test layer for the change:
+  - unit tests for pure logic,
+  - integration tests for boundary/collaboration points,
+  - end-to-end tests for user-facing workflows.
+- Run configured checks via placeholders rather than stack-specific commands:
+  - `LINT_COMMAND`
+  - `TEST_COMMAND`
+  - `BUILD_COMMAND`
+  - optional `E2E_TEST_COMMAND`
+- For each change, report:
+  - what you ran,
+  - what you skipped and why (e.g., low risk, not applicable, cost/complexity).
+- If the change is behavior-critical or user-facing, prefer adding tests that exercise the behavior directly.
+

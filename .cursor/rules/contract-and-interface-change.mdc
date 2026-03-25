@@ -1,0 +1,22 @@
+---
+description: Keep contracts/interfaces consistent and verifiable.
+alwaysApply: true
+---
+
+# Contract and Interface Change
+
+- If an API/contract/schema/interface is modified (public or cross-package), ensure the contract source of truth is updated.
+- Keep client/server or producer/consumer compatibility in mind:
+  - document breaking changes,
+  - add compatibility layers when feasible,
+  - include deprecation/transition steps if relevant.
+- Update any generated artifacts only if the repo’s existing workflow expects it.
+- Add or update validation steps so contract changes are caught by automated checks.
+
+## Contract Validation Placeholders
+
+- Prefer running contract validation using the configured placeholders when a contract/schema changes:
+  - `CONTRACT_SCHEMA_CHECK_COMMAND`
+  - `CONTRACT_TEST_COMMAND`
+- If both placeholders are `TODO_REPLACE_ME`, explicitly explain how contract compatibility will be verified locally.
+

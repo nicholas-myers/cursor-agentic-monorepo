@@ -1,0 +1,29 @@
+---
+description: Security and privacy baseline for code changes.
+alwaysApply: true
+---
+
+# Security and Privacy Baseline
+
+- Treat all external input as untrusted until validated and normalized.
+- Verify authorization (authz) on privileged operations; do not rely on client-side checks.
+- Validate and sanitize user-controlled data before use in:
+  - queries (prevent injection),
+  - template rendering (prevent XSS),
+  - filesystem/paths (prevent traversal),
+  - commands/process execution (prevent command injection).
+- Avoid leaking secrets in logs, error messages, metrics, and telemetry.
+- Handle errors safely:
+  - return minimal user-safe messages,
+  - record detailed context only in protected/internal logs.
+- Follow least-privilege principles for new permissions, roles, service calls, and database access.
+- If a change is security-relevant, require security verification steps and updated/added tests where applicable.
+
+## Security Scan Placeholders
+
+- If any of the following placeholders are configured (not `TODO_REPLACE_ME`), run the relevant checks during security-relevant changes:
+  - `SECRETS_SCAN_COMMAND`
+  - `SAST_SCAN_COMMAND`
+  - `SCA_SCAN_COMMAND`
+- If security scan placeholders are still `TODO_REPLACE_ME`, explicitly note that scans are not verified and how to run them locally after configuration.
+

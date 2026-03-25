@@ -1,0 +1,19 @@
+---
+description: Ensure observability coverage for new code paths.
+alwaysApply: true
+---
+
+# Observability Baseline
+
+- When adding new user-visible flows or failure modes, ensure observability is included:
+  - logs for key events and errors,
+  - metrics for important counts/latency/success rates,
+  - tracing/correlation identifiers where applicable.
+- Avoid noisy logging; prefer structured logs with context.
+- Ensure errors are captured by monitoring/alerting mechanisms if the repo has them.
+
+## Observability Verification Placeholder
+
+- If an observability check is configured, prefer running:
+  - `OBSERVABILITY_CHECK_COMMAND`
+

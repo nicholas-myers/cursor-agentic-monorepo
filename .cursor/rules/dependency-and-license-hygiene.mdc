@@ -1,0 +1,17 @@
+---
+description: Dependency audit and license hygiene baseline.
+alwaysApply: true
+---
+
+# Dependency and License Hygiene
+
+- If dependencies change (new packages, upgrades, or removals):
+  - review potential breaking changes,
+  - confirm transitive dependency risk,
+  - ensure the license obligations are understood for new/changed dependencies.
+- Prefer running configured dependency/license checks using placeholders when dependencies/security are in scope:
+  - `DEPENDENCY_AUDIT_COMMAND`
+  - `LICENSE_SCAN_COMMAND`
+  - `SBOM_GENERATE_COMMAND`
+- If you cannot run these checks yet, explain what risks were assessed and how you verified outcomes locally.
+

@@ -1,0 +1,24 @@
+---
+description: Ensure documentation and changelog expectations are met.
+alwaysApply: true
+---
+
+# Documentation and Changelog Baseline
+
+- If behavior, contracts, or user-facing flows change, update documentation accordingly:
+  - relevant READMEs,
+  - API/contract docs,
+  - database/schema docs (when applicable),
+  - migration notes.
+- Keep examples and referenced configurations in sync with the new behavior.
+- For user-visible changes:
+  - add or update changelog/release-note documentation when the repo has a convention.
+- Include a “how to verify” note in the description of the change when automated validation is incomplete.
+
+## Documentation Placeholder Commands
+
+- Prefer running any configured documentation checks:
+  - `DOCS_LINT_COMMAND`
+  - `DOCS_BUILD_COMMAND`
+  - optional `DOCS_LINK_CHECK_COMMAND`
+

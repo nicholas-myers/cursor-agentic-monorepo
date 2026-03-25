@@ -1,0 +1,18 @@
+---
+description: Prevent performance regressions and validate assumptions.
+alwaysApply: true
+---
+
+# Performance Regression Baseline
+
+- If the change touches performance-sensitive paths (hot loops, rendering, serialization, query logic, caching, networking), treat performance as a first-class requirement.
+- Define a small perf sanity plan:
+  - what to measure (latency, throughput, memory, query count, etc.),
+  - what thresholds are acceptable,
+  - how to compare before/after (or how to infer impact if no baseline exists).
+- Prefer running any configured perf checks via placeholders:
+  - `PERF_TEST_COMMAND`
+  - `BUNDLE_SIZE_CHECK_COMMAND`
+  - `LOAD_TEST_COMMAND` (if applicable)
+- If no perf placeholders are configured, document why the change is unlikely to regress performance and what manual checks will be used instead.
+
