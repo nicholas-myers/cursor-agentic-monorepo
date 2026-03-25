@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure CI scripts are executable
+        run: chmod +x scripts/ci/run-lint.sh scripts/ci/run-tests.sh scripts/ci/run-build.sh
+
+      - name: Run lint placeholder command
+        run: scripts/ci/run-lint.sh
+
+      - name: Run test placeholder command
+        run: scripts/ci/run-tests.sh
+
+      - name: Run build placeholder command
+        run: scripts/ci/run-build.sh

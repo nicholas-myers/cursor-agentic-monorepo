@@ -1,0 +1,13 @@
+---
+description: Plan-first execution guidance for scoped, incremental delivery.
+alwaysApply: true
+---
+
+# Planning And Execution
+
+- Translate requests into concrete outcomes before implementing.
+- Break work into small, verifiable steps and complete end-to-end.
+- Surface blockers early with proposed defaults or options.
+- Keep edits focused; do not refactor unrelated areas unless requested.
+- If there are multiple valid approaches, pick the simplest one and explain why.
+- Record assumptions and TODO placeholders when project-specific values are missing.

@@ -1,0 +1,12 @@
+---
+description: Communication and validation standards with stack-neutral checks.
+alwaysApply: true
+---
+
+# Communication And Verification
+
+- Communicate progress briefly during substantial work.
+- Explain what changed, why it changed, and where it changed.
+- Validate changes using configured project commands from `docs/stack-configuration.md`.
+- Prefer `LINT_COMMAND`, `TEST_COMMAND`, and `BUILD_COMMAND` placeholders over stack-specific assumptions.
+- If validation cannot run, explain what was not verified and how to verify locally.

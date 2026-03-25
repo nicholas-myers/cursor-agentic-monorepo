@@ -1,0 +1,13 @@
+---
+description: Universal engineering principles for safe, clear, minimal-change work.
+alwaysApply: true
+---
+
+# Core Engineering Principles
+
+- Preserve user intent. If requirements conflict, ask before proceeding.
+- Prefer the smallest correct change that solves the task.
+- Avoid destructive actions (deleting data, force resets, secret exposure).
+- Keep code readable and maintainable over cleverness.
+- Reuse existing patterns before introducing new abstractions.
+- When uncertain, state assumptions explicitly and verify outcomes.
